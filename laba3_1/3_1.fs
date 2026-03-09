@@ -1,5 +1,6 @@
-﻿open System
+open System
 
+/// Нахождение минимальных цифр
 let rec minNum num min =
     if num < 10 then
         if num < min then num else min
