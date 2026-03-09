@@ -1,23 +1,23 @@
-﻿open System
+open System
 
 /// проверка на наличие необходимого числа
-let rec recNum num required_number = 
+let rec recNum num requiredNumber = 
     if num < 10 then
-        if num = required_number then
+        if num = requiredNumber then
             1
         else
             0
     else
-        if num % 10 = required_number then
+        if num % 10 = requiredNumber then
             1
         else
-            recNum (num/10) required_number
+            recNum (num/10) requiredNumber
 
 /// Перебор элементов в seq
-let findNum numbers required_number = 
+let findNum numbers requiredNumber = 
     seq {
         for num in numbers do
-            yield recNum (abs(num)) required_number
+            yield recNum (abs(num)) requiredNumber
     }
 
 [<EntryPoint>]
